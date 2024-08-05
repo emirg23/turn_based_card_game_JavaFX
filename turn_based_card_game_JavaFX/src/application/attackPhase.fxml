@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.attackPhaseController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="160.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="player1NameCards" alignment="CENTER" prefHeight="22.0" prefWidth="164.0" text="player 1 cards" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></Label>
+      <Label fx:id="player2NameCards" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="169.0" text="player 2 cards" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></Label>
+      <Label fx:id="player1Health" alignment="CENTER" contentDisplay="CENTER" text="player 1's health: " GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="player2Health" alignment="CENTER" contentDisplay="CENTER" text="player 2's health: " GridPane.columnIndex="3" GridPane.halignment="CENTER">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="playerAttackTurn" alignment="CENTER" prefHeight="27.5" prefWidth="160.0" text="PLAYER 1'S" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.5" prefWidth="160.0" text="ATTACK TURN" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" startX="-700.0" strokeWidth="0.4" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Line endY="55.0" strokeWidth="0.4" GridPane.columnIndex="2" />
+      <Line endY="55.0" strokeWidth="0.4" GridPane.columnIndex="3" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+      <Line endX="159.0" strokeWidth="0.4" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="card name" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="health" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="52.0" text="damage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Line endY="40.0" strokeWidth="0.4" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+            <Line endY="40.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+            <Line endY="40.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Line fx:id="p1Card1Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card1HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card1Name" alignment="CENTER" contentDisplay="CENTER" text="1.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card1HP" alignment="CENTER" contentDisplay="CENTER" text="HP1" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card1AD" alignment="CENTER" contentDisplay="CENTER" text="AD1" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card1Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card1Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="3">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card2Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card2HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card2Name" alignment="CENTER" contentDisplay="CENTER" text="2.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card2HP" alignment="CENTER" contentDisplay="CENTER" text="HP2" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card2AD" alignment="CENTER" contentDisplay="CENTER" text="AD2" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card2Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card2Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="4">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card3Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card3HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card3Name" alignment="CENTER" contentDisplay="CENTER" text="3.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card3HP" alignment="CENTER" contentDisplay="CENTER" text="HP3" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card3AD" alignment="CENTER" contentDisplay="CENTER" text="AD3" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card3Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card3Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="5">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card4Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card4HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card4Name" alignment="CENTER" contentDisplay="CENTER" text="4.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card4HP" alignment="CENTER" contentDisplay="CENTER" text="HP4" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card4AD" alignment="CENTER" contentDisplay="CENTER" text="AD4" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card4Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card4Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="6">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card5Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card5HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card5Name" alignment="CENTER" contentDisplay="CENTER" text="5.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card5HP" alignment="CENTER" contentDisplay="CENTER" text="HP5" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card5AD" alignment="CENTER" contentDisplay="CENTER" text="AD5" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card5Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card5Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="7">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card6Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card6HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card6Name" alignment="CENTER" contentDisplay="CENTER" text="6.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card6HP" alignment="CENTER" contentDisplay="CENTER" text="HP6" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card6AD" alignment="CENTER" contentDisplay="CENTER" text="AD6" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card6Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card6Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="8">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card7Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card7HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card7Name" alignment="CENTER" contentDisplay="CENTER" text="7.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card7HP" alignment="CENTER" contentDisplay="CENTER" text="HP7" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card7AD" alignment="CENTER" contentDisplay="CENTER" text="AD7" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card7Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card7Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="9">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card8Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card8HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card8Name" alignment="CENTER" contentDisplay="CENTER" text="8.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card8HP" alignment="CENTER" contentDisplay="CENTER" text="HP8" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card8AD" alignment="CENTER" contentDisplay="CENTER" text="AD8" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card8Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card8Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.rowIndex="10">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line fx:id="p1Card9Stick" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p1Card9HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p1Card9Name" alignment="CENTER" contentDisplay="CENTER" text="9.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p1Card9HP" alignment="CENTER" contentDisplay="CENTER" text="HP9" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card9AD" alignment="CENTER" contentDisplay="CENTER" text="AD9" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p1Card9Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line fx:id="p1Card9Stick2" endY="56.0" strokeWidth="0.4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="card name" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="health" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="52.0" text="damage" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Line endY="40.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line endY="40.0" strokeWidth="0.4" GridPane.columnIndex="2" />
+            <Line endY="40.0" strokeWidth="0.4" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card1HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card1Name" alignment="CENTER" contentDisplay="CENTER" text="1.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card1HP" alignment="CENTER" contentDisplay="CENTER" text="HP1" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card1AD" alignment="CENTER" contentDisplay="CENTER" text="AD1" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card1Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card2HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card2Name" alignment="CENTER" contentDisplay="CENTER" text="2.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card2HP" alignment="CENTER" contentDisplay="CENTER" text="HP2" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card2AD" alignment="CENTER" contentDisplay="CENTER" text="AD2" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card2Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card3HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card3Name" alignment="CENTER" contentDisplay="CENTER" text="3.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card3HP" alignment="CENTER" contentDisplay="CENTER" text="HP3" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card3AD" alignment="CENTER" contentDisplay="CENTER" text="AD3" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card3Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card4HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card4Name" alignment="CENTER" contentDisplay="CENTER" text="4.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card4HP" alignment="CENTER" contentDisplay="CENTER" text="HP4" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card4AD" alignment="CENTER" contentDisplay="CENTER" text="AD4" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card4Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="6">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card5HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card5Name" alignment="CENTER" contentDisplay="CENTER" text="5.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card5HP" alignment="CENTER" contentDisplay="CENTER" text="HP5" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card5AD" alignment="CENTER" contentDisplay="CENTER" text="AD5" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card5Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="7">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card6HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card6Name" alignment="CENTER" contentDisplay="CENTER" text="6.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card6HP" alignment="CENTER" contentDisplay="CENTER" text="HP6" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card6AD" alignment="CENTER" contentDisplay="CENTER" text="AD6" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card6Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="8">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card7HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card7Name" alignment="CENTER" contentDisplay="CENTER" text="7.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card7HP" alignment="CENTER" contentDisplay="CENTER" text="HP7" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card7AD" alignment="CENTER" contentDisplay="CENTER" text="AD7" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card7Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="9">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card8HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card8Name" alignment="CENTER" contentDisplay="CENTER" text="8.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card8HP" alignment="CENTER" contentDisplay="CENTER" text="HP8" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card8AD" alignment="CENTER" contentDisplay="CENTER" text="AD8" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card8Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="4" GridPane.rowIndex="10">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="1" />
+            <Line fx:id="p2Card9HPADSplitter" endY="56.0" strokeWidth="0.4" visible="false" GridPane.columnIndex="2" />
+            <Label fx:id="p2Card9Name" alignment="CENTER" contentDisplay="CENTER" text="9.cardname" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="p2Card9HP" alignment="CENTER" contentDisplay="CENTER" text="HP9" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card9AD" alignment="CENTER" contentDisplay="CENTER" text="AD9" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Label>
+            <Label fx:id="p2Card9Spell" text="spell" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Line endY="56.0" strokeWidth="0.4" />
+         </children>
+      </GridPane>
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+      <Line endX="160.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="TOP" />
+      <Button fx:id="passTheTourButton" mnemonicParsing="false" onAction="#passTheTour" text="pass the tour" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Button>
+      <Label fx:id="attackPhaseInformation" alignment="CENTER" contentDisplay="CENTER" text="player 1 can select a card and use" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Line endY="56.0" strokeWidth="0.4" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+      <Line endY="56.0" strokeWidth="0.4" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+      <Button fx:id="p1Card1InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card2InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card3InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card4InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card5InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card6InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card7InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card8InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p1Card9InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card1InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card9InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card8InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card7InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card6InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card5InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card4InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card3InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="p2Card2InteractionButton" mnemonicParsing="false" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>
