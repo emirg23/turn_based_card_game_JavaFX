@@ -19,6 +19,7 @@ game rules
 - player 1 starts the game first, then players take turns in order
 
 - creatures' special abilities get applied at the end of each tour
+- 
 
 <img width="1440" alt="screenshot1" src="https://github.com/user-attachments/assets/2fee8b4c-32b3-4ff1-9391-337b89bb868a">
 
