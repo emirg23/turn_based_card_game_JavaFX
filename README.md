@@ -22,8 +22,6 @@ game rules
 
 <img width="1440" alt="screenshot1" src="https://github.com/user-attachments/assets/2fee8b4c-32b3-4ff1-9391-337b89bb868a">
 
-<img width="1440" alt="screenshot2" src="https://github.com/user-attachments/assets/7de6f99d-b6d4-4235-b434-a0803d5a7458">
-
 <img width="1440" alt="screenshot3" src="https://github.com/user-attachments/assets/8a646647-2e5b-4bc6-a84f-ee46d4d81f65">
 
 <img width="1440" alt="screenshot4" src="https://github.com/user-attachments/assets/42266236-c536-4907-a811-fe4095f16976">
